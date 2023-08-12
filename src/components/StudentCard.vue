@@ -11,18 +11,27 @@
                 font-mono
                 hover:bg-blue-50 
                 cursor-pointer" >
-      <span> First Name: {{ StudentDetail.name }}</span>
-      <p>Last Name: {{ StudentDetail.surName }}</p>
-      <p>Student ID: {{ StudentDetail.id }}</p>
-      <p>Registered: {{ StudentDetail.register }}</p>
-      <p>Advisor: {{ StudentDetail.advisor }}</p>
-    </div>
-  
+                <span> First Name: {{ student.FirstName }}</span>
+      <p>Last Name: {{ student.LastName }}</p>
+      <p>Student ID: {{ student.Student_ID}}</p>
+      <p>Registered: {{ student.registered }}</p>
+      <p>Advisor: {{ student.advisor}}</p>
+      <!-- <img src="Student." alt=""> -->
+</div>
+
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-const StudentDetail = ref({})
+import { ref, type PropType } from 'vue'
+import {type StudentDetail } from '@/type';
+
+const StudentDetail= ref({})
+const props = defineProps({
+  student:{
+    type: Object as PropType<StudentDetail>,
+    required:true
+  }
+})
 </script>
 
 <style scoped>
