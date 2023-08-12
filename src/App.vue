@@ -10,7 +10,7 @@ import { RouterLink, RouterView } from "vue-router"
 
     <div class="wrapper">
       
-      <nav>
+      <nav class="font-mono text-yellow-300" >
         <RouterLink to="/">Student</RouterLink>
         <RouterLink to="/teacher">Teacher</RouterLink>
         

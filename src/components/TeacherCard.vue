@@ -1,6 +1,15 @@
 <template>
-    <div class="border-2 border-white-w20-h20 bg-blue-500">
-      <span> First Name: {{ teacherDetail.name }}</span>
+    <div class="border-2 border-slate-600 w20-h20
+                rounded-lg
+                shadow-lg
+                m-5
+                bg-slate-100 px-10 py-8
+                text-slate-800 
+                text-base
+                font-mono
+                hover:bg-slate-300 
+                cursor-pointer" >
+      <span class="decoration-">First Name: {{ teacherDetail.name }}</span>
       <p>Last Name: {{ teacherDetail.surName }}</p>
       <p>Advisor ID: {{ teacherDetail.id }}</p>
     </div>
@@ -20,9 +29,9 @@
     margin-bottom: 18px;
   } */
   
-  .teacherDetail-class:hover {
+  /* .teacherDetail-class:hover {
     transform: scale(1.01);
     box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2);
-  }
+  } */
   </style>
   
