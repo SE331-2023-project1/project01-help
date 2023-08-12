@@ -1,22 +1,22 @@
 <template>
-  <div class="detailStudent-class">
-    <div class="detailStudent-class">
-      <span> First Name: {{ detailStudent.name }}</span>
-      <p>Last Name: {{ detailStudent.surName }}</p>
-      <p>Student ID: {{ detailStudent.id }}</p>
-      <p>Registered: {{ detailStudent.register }}</p>
-      <p>Advisor: {{ detailStudent.advisor }}</p>
+  <div class="StudentDetail-class">
+    <div class="StudentDetail-class">
+      <span> First Name: {{ StudentDetail.name }}</span>
+      <p>Last Name: {{ StudentDetail.surName }}</p>
+      <p>Student ID: {{ StudentDetail.id }}</p>
+      <p>Registered: {{ StudentDetail.register }}</p>
+      <p>Advisor: {{ StudentDetail.advisor }}</p>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
-const detailStudent = ref({})
+const StudentDetail = ref({})
 </script>
 
 <style scoped>
-.detailStudent-class {
+.StudentDetail-class {
   padding: 20px;
   width: 250px;
   cursor: pointer;
@@ -25,7 +25,7 @@ const detailStudent = ref({})
   margin-bottom: 18px;
 }
 
-.detailStudent-class:hover {
+.StudentDetail-class:hover {
   transform: scale(1.01);
   box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2);
 }

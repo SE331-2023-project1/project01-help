@@ -1,12 +1,17 @@
+<script setup lang="ts">
+import TeacherCard from '../components/TeacherCard.vue';
+
+
+</script>
 <template>
-  <div class="teacher">
-    <h1>This is an about page</h1>
-  </div>
+  <main>
+    <TeacherCard />
+  </main>
 </template>
 
 <style>
 @media (min-width: 1024px) {
-  .about {
+  .teacher {
     min-height: 100vh;
     display: flex;
     align-items: center;
