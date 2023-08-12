@@ -10,6 +10,7 @@ const apiClient: AxiosInstance = axios.create({
     'Content-Type': 'application/json'
   }
 })
+
 export default {
     getStudent(): Promise<AxiosResponse<StudentDetail[]>> {
       return apiClient.get<StudentDetail[]>('/student')
