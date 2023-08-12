@@ -1,6 +1,6 @@
 export interface StudentDetail {
     id: number
-    FirstName: number
+    FirstName: string
     LastName: string
     Student_ID: string
     registered: string
