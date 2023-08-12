@@ -3,7 +3,7 @@
                 rounded-lg
                 shadow-lg
                 m-5
-                bg-slate-100 px-10 py-8
+                bg-white px-10 py-8
                 text-slate-800 
                 text-base
                 font-mono

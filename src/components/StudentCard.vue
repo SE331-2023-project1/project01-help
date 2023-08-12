@@ -1,15 +1,15 @@
 <template>
 
     <div class="StudentDetail-class
-                border-2 border-slate-600 w20-h20
+                border-2 border-blue-950 w20-h20
                 rounded-lg
                 shadow-lg
                 m-5
-                bg-slate-100 px-10 py-8
-                text-slate-800 
+                bg-white px-10 py-8
+                text-blue-950 
                 text-base
                 font-mono
-                hover:bg-slate-300 
+                hover:bg-blue-50 
                 cursor-pointer" >
       <span> First Name: {{ StudentDetail.name }}</span>
       <p>Last Name: {{ StudentDetail.surName }}</p>
