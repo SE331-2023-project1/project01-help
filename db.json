@@ -6,7 +6,7 @@
         "Last Name": "Johnson",
         "Student_ID": "STID-1001",
         "registered": " Mathematics, English Literature, History, Physics, Spanish",
-        "advisor": [101],
+        "advisor": 101,
         "stu_pic": "https://randomuser.me/api/portraits/women/1.jpg"
         
         
@@ -18,7 +18,7 @@
         "Last Name": "Smith",
         "Student_ID": "STID-1002",
         "registered": "Physics, Computer Science, Spanish, Biology, Chemistry",
-        "advisor": [102],
+        "advisor": 102,
         "stu_pic": "https://randomuser.me/api/portraits/men/2.jpg"
         
       },
@@ -28,7 +28,7 @@
         "Last Name": " Martinez",
         "Student ID": "STID-1003",
         "registered": "Biology, Chemistry, French, Geography, Art",
-        "advisor": [103],
+        "advisor": 103,
         "stu_pic": "https://randomuser.me/api/portraits/women/3.jpg"
       },
       {
@@ -37,7 +37,7 @@
         "Last Name": "Anderson",
         "Student ID": "STID-1004",
         "registered": "Economics, Mathematics, Psychology, English Literature, Music",
-        "advisor": [104],
+        "advisor": 104,
         "stu_pic": "https://randomuser.me/api/portraits/men/4.jpg"
       },
       {
@@ -46,7 +46,7 @@
         "Last Name": "Thompson",
         "Student ID": "STID-1005",
         "registered": "JArt, Music, Physical Education, Spanish, History",
-        "advisor": [105],
+        "advisor": 105,
         "stu_pic": "https://randomuser.me/api/portraits/women/5.jpg"
       },
       {
@@ -55,7 +55,7 @@
         "Last Name": "Williams",
         "Student ID":"STID-1006",
         "registered": "English Literature, History, Geography, Chemistry, Biology",
-        "advisor": [106],
+        "advisor": 106,
         "stu_pic": "https://randomuser.me/api/portraits/men/6.jpg"
     
       },
@@ -65,7 +65,7 @@
         "Last Name": "Brown",
         "Student ID": "STID-1007",
         "registered": "Mathematics, Physics, Biology, Psychology, Computer Science",
-        "advisor": [107],
+        "advisor": 107,
         "stu_pic": "https://randomuser.me/api/portraits/women/7.jpg"
     
       },
@@ -75,7 +75,7 @@
         "Last Name": " Davis",
         "Student ID": "Chemistry, Computer Science, English, Geography, Economics",
         "registered": "STID-1008",
-        "advisor": [108],
+        "advisor": 108,
         "stu_pic": "https://randomuser.me/api/portraits/men/8.jpg"
     
       },
@@ -85,7 +85,7 @@
         "Last Name": "Rodriguez",
         "Student ID": "STID-1008",
         "registered": "Spanish, Art, Psychology, Music, French",
-        "advisor": [109],
+        "advisor": 109,
         "stu_pic": "https://randomuser.me/api/portraits/women/9.jpg"
     
       },
@@ -95,7 +95,7 @@
         "Last Name": "Wilson",
         "Student ID": "STID-1010",
         "registered": "Geography, History, Economics, Mathematics, English Literature",
-        "advisor": [110],
+        "advisor": 110,
         "stu_pic": "https://randomuser.me/api/portraits/men/10.jpg"
     
       },
@@ -105,7 +105,7 @@
         "Last Name": "Taylor",
         "Student ID": "STID-1011",
         "registered": "Biology, Chemistry, Music, Spanish, Physical Education",
-        "advisor": [101],
+        "advisor": 101,
         "stu_pic": "https://randomuser.me/api/portraits/women/11.jpg"
     
       },
@@ -115,7 +115,7 @@
         "Last Name": "Moore",
         "Student ID": "STID-1012",
         "registered": "Mathematics, Physics, Computer Science, History, Chemistry",
-        "advisor": [102],
+        "advisor": 102,
         "stu_pic": "https://randomuser.me/api/portraits/men/12.jpg"
     
       },
@@ -125,7 +125,7 @@
         "Last Name": "Garcia",
         "Student ID": "STID-1013",
         "registered": "English Literature, History, French, Geography, Art",
-        "advisor": [103],
+        "advisor": 103,
         "stu_pic": "https://randomuser.me/api/portraits/women/13.jpg"
     
       },
@@ -135,7 +135,7 @@
         "Last Name": "Jackson",
         "Student ID": "STID-1014",
         "registered": "Economics, Psychology, Spanish, Music, Biology",
-        "advisor": [104],
+        "advisor": 104,
         "stu_pic": "https://randomuser.me/api/portraits/men/14.jpg"
     
       },
@@ -145,7 +145,7 @@
         "Last Name": "Lee",
         "Student ID": "STID-1015",
         "registered": "Geography, Art, Physical Education, English Literature, Chemistry",
-        "advisor": [105],
+        "advisor": 105,
         "stu_pic": "https://randomuser.me/api/portraits/women/15.jpg"
     
       },
@@ -155,7 +155,7 @@
         "Last Name": "Harris",
         "Student ID": "STID-1016",
         "registered": "Music, English Literature, Mathematics, Physics, Psychology",
-        "advisor": [106],
+        "advisor": 106,
         "stu_pic": "https://randomuser.me/api/portraits/men/16.jpg"
     
       },
@@ -165,7 +165,7 @@
         "Last Name": "Clark",
         "Student ID": "STID-1017",
         "registered": "Chemistry, Biology, Spanish, Computer Science, Economics",
-        "advisor": [107],
+        "advisor": 107,
         "stu_pic": "https://randomuser.me/api/portraits/women/17.jpg"
     
       },
@@ -175,7 +175,7 @@
         "Last Name": "White",
         "Student ID": "STID-1018",
         "registered": "Physics, Computer Science, Geography, History, French",
-        "advisor": [108],
+        "advisor": 108,
         "stu_pic": "https://randomuser.me/api/portraits/men/18.jpg"
     
       },
@@ -185,7 +185,7 @@
         "Last Name": "Hall",
         "Student ID": "STID-1019",
         "registered": "History, Economics, Psychology, Biology, Music",
-        "advisor": [109],
+        "advisor": 109,
         "stu_pic": "https://randomuser.me/api/portraits/women/19.jpg"
     
       },
@@ -195,7 +195,7 @@
         "Last Name": "Perez",
         "Student ID":  "STID-1020",
         "registered": "Mathematics, Chemistry, Music, English Literature, Spanish",
-        "advisor": [110],
+        "advisor": 110,
         "stu_pic": "https://randomuser.me/api/portraits/men/20.jpg"
     
       },
@@ -205,7 +205,7 @@
         "Last Name": "Martin",
         "Student ID": "STID-1021",
         "registered": "English Literature, Art, French, Geography, Psychology",
-        "advisor": [101],
+        "advisor": 101,
         "stu_pic": "https://randomuser.me/api/portraits/men/21.jpg"
     
       },
@@ -215,7 +215,7 @@
         "Last Name": "Martinez",
         "Student ID":  "STID-1022",
         "registered": "Biology, Physics, Spanish, Chemistry, Physical Education",
-        "advisor": [102],
+        "advisor": 102,
         "stu_pic": "https://randomuser.me/api/portraits/women/22.jpg"
     
       },
@@ -225,7 +225,7 @@
         "Last Name": "Robinson",
         "Student ID": "STID-1023",
         "registered": "Geography, Economics, Physical Education, Music, Computer Science",
-        "advisor": [103],
+        "advisor": 103,
         "stu_pic": "https://randomuser.me/api/portraits/women/23.jpg"
     
       },
@@ -235,7 +235,7 @@
         "Last Name": "Davis",
         "Student ID": "STID-1024" ,
         "registered": "History, Psychology, Computer Science, Chemistry, Biology",
-        "advisor": [104],
+        "advisor": 104,
         "stu_pic": "https://randomuser.me/api/portraits/women/24.jpg"
     
       },
@@ -245,7 +245,7 @@
         "Last Name": "Adams",
         "Student ID": "STID-1025",
         "registered": "Chemistry, Music, English, Mathematics, Spanish",
-        "advisor": [105],
+        "advisor": 105,
         "stu_pic": "https://randomuser.me/api/portraits/women/25.jpg"
     
       },
@@ -255,7 +255,7 @@
         "Last Name": "Murphy",
         "Student ID": "STID-1026",
         "registered": "Economics, History, Psychology, English Literature, Chemistry",
-        "advisor": [106],
+        "advisor": 106,
         "stu_pic": "https://randomuser.me/api/portraits/men/26.jpg"
     
       },
@@ -265,7 +265,7 @@
         "Last Name": "Scott",
         "Student ID": "STID-1027",
         "registered": "Mathematics, Physics, Art, Biology, Geography",
-        "advisor": [107],
+        "advisor": 107,
         "stu_pic": "https://randomuser.me/api/portraits/men/27.jpg"
     
       },
@@ -275,7 +275,7 @@
         "Last Name": "Turner",
         "Student ID": "STID-1028",
         "registered": "Spanish, Geography, Biology, History, Economics",
-        "advisor": [108],
+        "advisor": 108,
         "stu_pic": "https://randomuser.me/api/portraits/men/28.jpg"
     
       },
@@ -285,7 +285,7 @@
         "Last Name": "Green",
         "Student ID": "STID-1029",
         "registered": "Music, English Literature, Physics, Chemistry, Biology",
-        "advisor": [109],
+        "advisor": 109,
         "stu_pic": "https://randomuser.me/api/portraits/men/29.jpg"
     
       },
@@ -295,7 +295,7 @@
         "Last Name": "Rivera",
         "Student ID": "STID-1030",
         "registered": "Computer Science, Chemistry, French, Music, Mathematics",
-        "advisor": [110],
+        "advisor": 110,
         "stu_pic": "https://randomuser.me/api/portraits/women/30.jpg"
     
       }
