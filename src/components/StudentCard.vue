@@ -1,6 +1,5 @@
 <template>
-
-    <div class="StudentDetail-class
+<div class="StudentDetail-class
                 border-2 border-blue-950 w20-h20
                 rounded-lg
                 shadow-lg
@@ -12,13 +11,17 @@
                 hover:bg-blue-50 
                 cursor-pointer" >
                 <span> First Name: {{ student.FirstName }}</span>
+                </div>
+  <RouterLink :to="{ name: 'student-detail', params: { id: student.id } }">
+    <div v-if="student" class="StudentDetail-class">
+      <span> First Name: {{ student.FirstName }}</span>
       <p>Last Name: {{ student.LastName }}</p>
       <!-- <p>Student ID: {{ student.Student_ID}}</p>
       <p>Registered: {{ student.registered }}</p>
       <p>Advisor: {{ student.advisor}}</p> -->
       <img :src = "student.stu_pic" alt="img">
-    
-  </div>
+    </div>
+  </RouterLink>
 </template>
 
 <script setup lang="ts">

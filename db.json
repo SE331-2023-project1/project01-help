@@ -2,7 +2,7 @@
     "student": [
       {
         "id": 1,
-        "FirstName": "Emily Johnson",
+        "FirstName": "Emily",
         "LastName": "Johnson",
         "Student_ID": "STID-1001",
         "registered": " Mathematics, English Literature, History, Physics, Spanish",
