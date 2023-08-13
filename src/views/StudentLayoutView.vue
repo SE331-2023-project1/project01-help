@@ -12,7 +12,6 @@ const props = defineProps({
     id: String
 })
 
-
 StudentService.getStudentById(Number(props.id)).then((response) => {
     student.value = response.data
 }).catch(error => {
@@ -23,7 +22,6 @@ StudentService.getStudentById(Number(props.id)).then((response) => {
         router.push({ name: 'network-error' })
     }
 })
-
 </script>
 
 <template>
@@ -33,21 +31,11 @@ StudentService.getStudentById(Number(props.id)).then((response) => {
         <img class="mb-5" :src = "student.stu_pic" alt="img">
         <hr class="mb-5">
         <div id="nav">
-            <RouterLink class="mb-2 block w-11" :to="{ name: 'student-detail', params: { id } }">Details</RouterLink>
-            <RouterLink class="mb-2 block w-11" :to="{ name: 'student-advisor', params: { id } }">Advisor</RouterLink>
+            <RouterLink class="w-1/2 mr-3 text-green-500 py-2 rounded text-center" :to="{ name: 'student-detail', params: { id } }">Details</RouterLink>
+            <span class="text-gray-350">|</span>
+            <RouterLink class="w-1/2 ml-3 text-green-500 py-2 rounded text-center" :to="{ name: 'student-advisor', params: { id } }">Advisor</RouterLink>
         </div>
-        <p>
-            <span class="font-bold">First Name :</span> {{ student.FirstName }}
-        </p>
-        <p>
-            <span class="font-bold">Last Name :</span> {{ student.LastName }}
-        </p>
-        <p>
-            <span class="font-bold">Student ID :</span> {{ student.Student_ID }}
-        </p>
-        <p>
-            <span class="font-bold mb-10">Registered on :</span> {{ student.registered }}
-        </p>
       </div>
+      <RouterView class="mt-3" :student="student"></RouterView>
     </div>
-  </template>
+</template>
