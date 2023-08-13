@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import StudentView from '../views/StudentView.vue'
 import TeacherView from '../views/TeacherView.vue'
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -13,12 +15,19 @@ const router = createRouter({
     {
       path: '/teacher',
       name: 'teacher',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: TeacherView
     }
   ]
+})
+
+// Start the progress bar on navigation
+router.beforeEach(() => {
+  NProgress.start()
+})
+
+// Complete the progress bar after navigation
+router.afterEach(() => {
+  NProgress.done()
 })
 
 export default router
