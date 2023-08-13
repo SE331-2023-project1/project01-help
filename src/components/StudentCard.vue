@@ -13,12 +13,12 @@
                 cursor-pointer" >
                 <span> First Name: {{ student.FirstName }}</span>
       <p>Last Name: {{ student.LastName }}</p>
-      <p>Student ID: {{ student.Student_ID}}</p>
+      <!-- <p>Student ID: {{ student.Student_ID}}</p>
       <p>Registered: {{ student.registered }}</p>
-      <p>Advisor: {{ student.advisor}}</p>
-      <!-- <img src="Student." alt=""> -->
-</div>
-
+      <p>Advisor: {{ student.advisor}}</p> -->
+      <img :src = "student.stu_pic" alt="img">
+    
+  </div>
 </template>
 
 <script setup lang="ts">
