@@ -12,7 +12,7 @@ import { RouterLink, RouterView } from "vue-router"
       
       <nav>
         <RouterLink to="/">Student</RouterLink>
-        <RouterLink to="/teacher">Teacher</RouterLink>
+        <RouterLink to="/teacher">Advisor</RouterLink>
         
       </nav>
     </div>
