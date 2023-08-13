@@ -1,5 +1,5 @@
 <template>
-  
+  <RouterLink :to="{ name: 'student-detail', params: { id: student.id } }">
     <div v-if="student" class="StudentDetail-class">
       <span> First Name: {{ student.FirstName }}</span>
       <p>Last Name: {{ student.LastName }}</p>
@@ -7,8 +7,8 @@
       <p>Registered: {{ student.registered }}</p>
       <p>Advisor: {{ student.advisor}}</p> -->
       <img :src = "student.stu_pic" alt="img">
-    
-  </div>
+    </div>
+  </RouterLink>
 </template>
 
 <script setup lang="ts">
