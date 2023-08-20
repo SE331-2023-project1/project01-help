@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import type { Ref } from 'vue'
-import type { StudentDetail} from '@/type';
+import type { StudentDetail, TeacherDetail} from '@/type';
 import { ref, type PropType } from 'vue';
-import StudentService from '@/services/StudentService';
 import { useRouter } from 'vue-router';
+import StudentService from '@/services/StudentService';
+import AdvisorService from '@/services/AdvisorService';
 
 const student = ref<StudentDetail | null>(null)
+const advisor = ref<TeacherDetail | null>(null);
+
 const router = useRouter()
 
 const props = defineProps({
@@ -22,6 +25,18 @@ StudentService.getStudentById(Number(props.id)).then((response) => {
         router.push({ name: 'network-error' })
     }
 })
+
+AdvisorService.getAdvisorById(Number(props.id)).then((response) => {
+    advisor.value = response.data
+}).catch(error => {
+    console.log(error)
+    if (error.response && error.response.status === 404) {
+        router.push({ name: '404-resource', params: { resource: 'advisor' } })
+    } else {
+        router.push({ name: 'network-error' })
+    }
+});
+
 </script>
 
 <template>
@@ -37,5 +52,6 @@ StudentService.getStudentById(Number(props.id)).then((response) => {
         </div>
       </div>
       <RouterView class="mt-3" :student="student"></RouterView>
+      <RouterView class="mt-3" :advisor="advisor"></RouterView>
     </div>
 </template>

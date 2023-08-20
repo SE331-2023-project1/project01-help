@@ -4,19 +4,15 @@ import type { TeacherDetail } from '@/type';
 import { ref, type PropType } from 'vue';
 import StudentService from '@/services/StudentService';
 
-const advisor = ref<TeacherDetail | null>(null)
-
 defineProps({
     advisor: {
         type: Object as PropType<TeacherDetail>,
-        required: true
+        require: true
     }
 })
 </script>
 
-
 <template>
-    <p>Registration from here</p>
     <div>
         <div v-if="advisor">
             <p>
