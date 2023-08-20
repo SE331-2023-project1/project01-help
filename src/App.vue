@@ -1,7 +1,7 @@
 
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router"
-fetch('https://jsonplaceholder.typicode.com/todos/1')
+fetch('https://jsonplaceholder.typicode.com/SE331-2023-project1/project01-help')
       .then(response => response.json())
       .then(json => console.log(json))
 
