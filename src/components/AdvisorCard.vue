@@ -1,26 +1,22 @@
 <template>
-
     <div class="border-2 border-slate-600 w20-h20
                 rounded-lg
                 shadow-lg
                 m-5
-                bg-white px-10 py-8
-                text-slate-800 
+              bg-white px-10 py-8
+              text-slate-800 
                 text-base
                 font-mono
-                hover:bg-slate-300 
+              hover:bg-slate-300 
                 cursor-pointer" >
       <span> First Name: {{ advisor.FirstName }}</span>
     <p>Last Name: {{ advisor.LastName }}</p>
     <p>Department: {{ advisor.Department}}</p>
     <p>Email: {{ advisor.Email }}</p>
     <p>Office: {{ advisor.Office}}</p>
-    <img :src = "advisor.advisor_pic" alt="img">
-  
+    <img class="mt-5" :src = "advisor.advisor_pic" alt="img">
     </div>
-  </template>
-
-  
+</template>
 
 <script setup lang="ts">
 import { ref, type PropType } from 'vue'

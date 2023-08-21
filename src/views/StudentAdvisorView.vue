@@ -22,10 +22,10 @@ defineProps({
                 <span class="font-bold">Last Name :</span> {{ advisor.LastName }}
             </p>
             <p>
-                <span class="font-bold">Student ID :</span> {{ advisor.Office }}
+                <span class="font-bold">Office :</span> {{ advisor.Office }}
             </p>
             <p>
-                <span class="font-bold mb-10">Registered on :</span> {{ advisor.Email }}
+                <span class="font-bold mb-10">Email :</span> {{ advisor.Email }}
             </p>
         </div>
     </div>

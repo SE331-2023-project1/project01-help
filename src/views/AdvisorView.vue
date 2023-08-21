@@ -40,9 +40,14 @@ const displayedadvisors = computed(() => {
   <div class="advisor">
     <AdvisorCard v-for="advisor in displayedadvisors" :key="advisor.id" :advisor="advisor"></AdvisorCard>
     <div class="pagination">
-      <button @click="prevPage" :disabled="currentPage === 1">PrevPage</button>
-      <button @click="nextPage" :disabled="currentPage === Math.ceil(advisors.length / itemsPerPage)">NextPage</button>
+      <button v-if="currentPage > 1" @click="prevPage" 
+        class="ml-5 mb-5 px-3 py-2 bg-green-700 font-bold text-white rounded-md hover:bg-red-500 transition-colors duration-200 ease-in-out">
+        ◀ Back
+      </button>
+      <button v-if="currentPage < Math.ceil(advisors.length / itemsPerPage)" @click="nextPage"
+        class="ml-5 mb-5 px-3 py-2 bg-green-700 font-bold text-white rounded-md hover:bg-red-500 transition-colors duration-200 ease-in-out">
+        Next ▶
+      </button>
     </div>
   </div>
 </template>
-
