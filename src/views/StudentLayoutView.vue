@@ -42,16 +42,18 @@ AdvisorService.getAdvisorById(Number(props.id)).then((response) => {
 <template>
     <div>
       <div v-if="student">
-        <h1 class="text-2xl font-bold -mt-10 mb-5">{{ `${student.FirstName} ${student.LastName}` }}</h1>
-        <img class="mb-5" :src = "student.stu_pic" alt="img">
+        <h1 class="text-2xl font-bold mt-5 mb-5">{{ `${student.FirstName} ${student.LastName}` }}</h1>
+        <img class="mb-5 max-w-full" :src="student.stu_pic" alt="img">
         <hr class="mb-5">
         <div id="nav">
-            <RouterLink class="w-1/2 mr-3 text-green-500 py-2 rounded text-center" :to="{ name: 'student-detail', params: { id } }">Details</RouterLink>
+            <RouterLink class="w-1/2 mr-3 text-green-500 py-2 rounded text-center" :to="{ name: 
+                'student-detail', params: { id } }">Details</RouterLink>
             <span class="text-gray-350">|</span>
-            <RouterLink class="w-1/2 ml-3 text-green-500 py-2 rounded text-center" :to="{ name: 'student-advisor', params: { id } }">Advisor</RouterLink>
+            <RouterLink class="w-1/2 ml-3 text-green-500 py-2 rounded text-center" :to="{ name: 
+                'student-advisor', params: { id } }">Advisor</RouterLink>
         </div>
-      </div>
-      <RouterView class="mt-3" :student="student"></RouterView>
-      <RouterView class="mt-3" :advisor="advisor"></RouterView>
     </div>
+    <RouterView class="mt-3" :student="student"></RouterView>
+    <RouterView class="mt-3" :advisor="advisor"></RouterView>
+  </div>
 </template>
