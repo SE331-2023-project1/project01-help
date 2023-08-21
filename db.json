@@ -1,11 +1,11 @@
 {
-    "student": [
+    "student": [ 
       {
         "id": 1,
         "FirstName": "Emily",
         "LastName": "Johnson",
         "Student_ID": "STID-1001",
-        "registered": ["Mathematics", "English Literature", "History", "Physics", "Spanish"],
+        "registered": "Mathematics, English Literature, History, Physics, Spanish",
         "advisor": 101,
         "stu_pic": "https://randomuser.me/api/portraits/women/1.jpg"
       },
@@ -14,7 +14,7 @@
         "FirstName": "Ethan",
         "LastName": "Smith",
         "Student_ID": "STID-1002",
-        "registered": ["Mathematics", "English Literature", "History", "Physics", "Spanish"],
+        "registered": "Physics, Computer Science, Spanish, Biology, Chemistry",
         "advisor": 102,
         "stu_pic": "https://randomuser.me/api/portraits/men/2.jpg"
         
@@ -24,7 +24,7 @@
         "FirstName": "Olivia",
         "LastName": " Martinez",
         "Student_ID": "STID-1003",
-        "registered": ["Mathematics", "English Literature", "History", "Physics", "Spanish"],
+        "registered": "Biology, Chemistry, French, Geography, Art",
         "advisor": 103,
         "stu_pic": "https://randomuser.me/api/portraits/women/3.jpg"
       },
@@ -33,7 +33,7 @@
         "FirstName": "Liam",
         "LastName": "Anderson",
         "Student_ID": "STID-1004",
-        "registered": ["Mathematics", "English Literature", "History", "Physics", "Spanish"],
+        "registered": "Economics, Mathematics, Psychology, English Literature, Music",
         "advisor": 104,
         "stu_pic": "https://randomuser.me/api/portraits/men/4.jpg"
       },
@@ -42,7 +42,7 @@
         "FirstName": "Ava ",
         "LastName": "Thompson",
         "Student_ID": "STID-1005",
-        "registered": ["Mathematics", "English Literature", "History", "Physics", "Spanish"],
+        "registered": "JArt, Music, Physical Education, Spanish, History",
         "advisor": 105,
         "stu_pic": "https://randomuser.me/api/portraits/women/5.jpg"
       },
@@ -51,7 +51,7 @@
         "FirstName": "Noah",
         "LastName": "Williams",
         "Student_ID":"STID-1006",
-        "registered": ["Mathematics", "English Literature", "History", "Physics", "Spanish"],
+        "registered": "English Literature, History, Geography, Chemistry, Biology",
         "advisor": 106,
         "stu_pic": "https://randomuser.me/api/portraits/men/6.jpg"
       },
@@ -60,7 +60,7 @@
         "FirstName": "Sophia",
         "LastName": "Brown",
         "Student_ID": "STID-1007",
-        "registered": ["Mathematics", "English Literature", "History", "Physics", "Spanish"],
+        "registered": "Mathematics, Physics, Biology, Psychology, Computer Science",
         "advisor": 107,
         "stu_pic": "https://randomuser.me/api/portraits/women/7.jpg"
       },
@@ -69,7 +69,7 @@
         "FirstName": "Jackson",
         "LastName": " Davis",
         "Student_ID": "STID-1008",
-        "registered": ["Mathematics", "English Literature", "History", "Physics", "Spanish"],
+        "registered": "Chemistry, Computer Science, English, Geography, Economics",
         "advisor": 108,
         "stu_pic": "https://randomuser.me/api/portraits/men/8.jpg"
       },
@@ -78,7 +78,7 @@
         "FirstName": "Isabella ",
         "LastName": "Rodriguez",
         "Student_ID": "STID-1008",
-        "registered": ["Mathematics", "English Literature", "History", "Physics", "Spanish"],
+        "registered": "Spanish, Art, Psychology, Music, French",
         "advisor": 109,
         "stu_pic": "https://randomuser.me/api/portraits/women/9.jpg"
       },
@@ -87,7 +87,7 @@
         "FirstName": "Aiden",
         "LastName": "Wilson",
         "Student_ID": "STID-1010",
-        "registered": ["Mathematics", "English Literature", "History", "Physics", "Spanish"],
+        "registered": "Geography, History, Economics, Mathematics, English Literature",
         "advisor": 110,
         "stu_pic": "https://randomuser.me/api/portraits/men/10.jpg"
       },
@@ -96,7 +96,7 @@
         "FirstName": "Mia",
         "LastName": "Taylor",
         "Student_ID": "STID-1011",
-        "registered": ["Mathematics", "English Literature", "History", "Physics", "Spanish"],
+        "registered": "Biology, Chemistry, Music, Spanish, Physical Education",
         "advisor": 101,
         "stu_pic": "https://randomuser.me/api/portraits/women/11.jpg"
       },
