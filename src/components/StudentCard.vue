@@ -1,5 +1,6 @@
 <template>
   <RouterLink :to="{ name: 'student-detail', params: { id: student.id } }">
+    <p>test run</p>
     <div v-if="student" class="StudentDetail-class">
       <div class="StudentDetail-class
                   border-2 border-blue-950 w20-h20
