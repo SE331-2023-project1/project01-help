@@ -1,6 +1,6 @@
 import axios from 'axios'
 import type { AxiosInstance, AxiosResponse } from 'axios'
-import type { TeacherDetail } from '@/type'
+import type { AdvisorDetail } from '@/type'
 
 const apiClient: AxiosInstance = axios.create({
   baseURL: import.meta.env.VITE_BACKEND_URL,
@@ -11,10 +11,10 @@ const apiClient: AxiosInstance = axios.create({
   }
 })
 export default {
-    getAdvisor(): Promise<AxiosResponse<TeacherDetail[]>> {
-      return apiClient.get<TeacherDetail[]>('/advisor')
+    getAdvisor(): Promise<AxiosResponse<AdvisorDetail[]>> {
+      return apiClient.get<AdvisorDetail[]>('/advisor')
     },
-    getAdvisorById(id : number) : Promise<AxiosResponse<TeacherDetail>>{
-      return apiClient.get<TeacherDetail>('advisor/'+ id.toString())
+    getAdvisorById(id : number) : Promise<AxiosResponse<AdvisorDetail>>{
+      return apiClient.get<AdvisorDetail>('advisor/'+ id.toString())
     }
   }

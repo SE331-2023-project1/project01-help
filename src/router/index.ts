@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import StudentView from '../views/StudentView.vue'
-import TeacherView from '../views/TeacherView.vue'
+import AdvisorView from '../views/AdvisorView.vue'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 import StudentLayoutView from '../views/StudentLayoutView.vue'
@@ -16,9 +16,9 @@ const router = createRouter({
       component: StudentView
     },
     {
-      path: '/teacher',
-      name: 'teacher',
-      component: TeacherView
+      path: '/advisor',
+      name: 'advisor',
+      component: AdvisorView
     },
     {
       path: '/student/:id',

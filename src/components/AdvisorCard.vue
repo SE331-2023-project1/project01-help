@@ -24,12 +24,12 @@
 
 <script setup lang="ts">
 import { ref, type PropType } from 'vue'
-import {type TeacherDetail } from '@/type';
+import {type AdvisorDetail } from '@/type';
 
-const TeacherDetail= ref({})
+const AdvisorDetail= ref({})
 const props = defineProps({
   advisor:{
-  type: Object as PropType<TeacherDetail>,
+  type: Object as PropType<AdvisorDetail>,
   required:true
 }
 })

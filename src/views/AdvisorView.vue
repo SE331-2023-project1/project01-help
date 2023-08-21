@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import TeacherCard from '@/components/TeacherCard.vue'
-import TeacherService from '@/services/TeacherService'
-import type { TeacherDetail } from '@/type'
+import AdvisorCard from '@/components/AdvisorCard.vue'
+import AdvisorService from '@/services/AdvisorService'
+import type { AdvisorDetail } from '@/type'
 import { ref , computed } from 'vue'
 import type { Ref } from 'vue'
 
-const advisors: Ref<Array<TeacherDetail>> = ref([])
+const advisors: Ref<Array<AdvisorDetail>> = ref([])
 const itemsPerPage = 5; 
 const currentPage = ref(1);
 
-TeacherService.getTeacher()
+AdvisorService.getAdvisor()
   .then((response) => {
     advisors.value = response.data;
   })
@@ -38,7 +38,7 @@ const displayedadvisors = computed(() => {
 
 <template>
   <div class="advisor">
-    <TeacherCard v-for="advisor in displayedadvisors" :key="advisor.id" :advisor="advisor"></TeacherCard>
+    <AdvisorCard v-for="advisor in displayedadvisors" :key="advisor.id" :advisor="advisor"></AdvisorCard>
     <div class="pagination">
       <button @click="prevPage" :disabled="currentPage === 1">PrevPage</button>
       <button @click="nextPage" :disabled="currentPage === Math.ceil(advisors.length / itemsPerPage)">NextPage</button>

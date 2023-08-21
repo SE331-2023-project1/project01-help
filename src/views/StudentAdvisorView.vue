@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import type { Ref } from 'vue'
-import type { TeacherDetail } from '@/type';
+import type { AdvisorDetail } from '@/type';
 import { ref, type PropType } from 'vue';
 import StudentService from '@/services/StudentService';
 
 defineProps({
     advisor: {
-        type: Object as PropType<TeacherDetail>,
+        type: Object as PropType<AdvisorDetail>,
         require: true
     }
 })

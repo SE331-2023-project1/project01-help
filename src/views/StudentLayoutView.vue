@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import type { Ref } from 'vue'
-import type { StudentDetail, TeacherDetail} from '@/type';
+import type { StudentDetail, AdvisorDetail} from '@/type';
 import { ref, type PropType } from 'vue';
 import { useRouter } from 'vue-router';
 import StudentService from '@/services/StudentService';
 import AdvisorService from '@/services/AdvisorService';
 
 const student = ref<StudentDetail | null>(null)
-const advisor = ref<TeacherDetail | null>(null);
+const advisor = ref<AdvisorDetail | null>(null);
 
 const router = useRouter()
 
