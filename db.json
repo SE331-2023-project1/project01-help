@@ -96,7 +96,7 @@
         "FirstName": "Mia",
         "LastName": "Taylor",
         "Student_ID": "STID-1011",
-        "registered": "Biology, Chemistry, Music, Spanish, Physical Education",
+        "registered": ["Mathematics", "English Literature", "History", "Physics", "Spanish"],
         "advisor": 101,
         "stu_pic": "https://randomuser.me/api/portraits/women/11.jpg"
       },
@@ -171,15 +171,6 @@
         "registered": "History, Economics, Psychology, Biology, Music",
         "advisor": 109,
         "stu_pic": "https://randomuser.me/api/portraits/women/19.jpg"
-      },
-      {
-        "id": 20,
-        "FirstName": "James ",
-        "LastName": "Perez",
-        "Student_ID":  "STID-1020",
-        "registered": "Mathematics, Chemistry, Music, English Literature, Spanish",
-        "advisor": 110,
-        "stu_pic": "https://randomuser.me/api/portraits/men/20.jpg"
       }
     ],
     "advisor": [
