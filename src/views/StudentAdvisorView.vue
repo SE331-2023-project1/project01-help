@@ -19,7 +19,7 @@ AdvisorService.getAdvisorById(Number(advisorId))
 
 <template>
     <div class="flex justify-start -ml-5">
-      <AdvisorCard :advisor="advisor"></AdvisorCard>
+        <AdvisorCard v-if="advisor" :advisor="advisor"></AdvisorCard>
     </div>
 </template>
 
