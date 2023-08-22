@@ -19,8 +19,3 @@ export interface AdvisorDetail {
     advisor_pic: string
 
 }
-
-
-
-
-

@@ -35,17 +35,13 @@
 </script>
   
 <style scoped>
-  /* .StudentDetail-class {
-    padding: 20px;
-    width: 250px;
-    cursor: pointer;
-    border: 1 px solid #39495c;
-    margin-top: 20px;
-    margin-bottom: 18px;
-  }
+.StudentDetail-class {
+  width: 300px;
+  cursor: pointer;
+}
   
-  .StudentDetail-class:hover {
-    transform: scale(1.01);
-    box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2);
-  } */
+.StudentDetail-class:hover {
+  transform: scale(1.01);
+  box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2);
+}
 </style>

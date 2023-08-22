@@ -1,32 +1,32 @@
 <script setup lang="ts">
-import type { Ref } from 'vue'
-import type { AdvisorDetail } from '@/type';
-import { ref, type PropType } from 'vue';
-import StudentService from '@/services/StudentService';
+import AdvisorCard from '@/components/AdvisorCard.vue'
+import { ref, onMounted } from 'vue'
+import AdvisorService from '@/services/AdvisorService'
+import type { AdvisorDetail } from '@/type'
+import { useRouter, useRoute } from 'vue-router'
 
-defineProps({
-    advisor: {
-        type: Object as PropType<AdvisorDetail>,
-        require: true
-    }
-})
+const advisorId = useRoute().params.advisorId
+const advisor = ref<AdvisorDetail | null>(null)
+
+AdvisorService.getAdvisorById(Number(advisorId))
+  .then((response) => {
+    advisor.value = response.data as AdvisorDetail // Explicitly cast the type
+  })
+  .catch((error) => {
+    console.error('Error fetching advisor:', error)
+  })
 </script>
 
 <template>
-    <div>
-        <div v-if="advisor">
-            <p>
-                <span class="font-bold">First Name :</span> {{ advisor.FirstName }}
-            </p>
-            <p>
-                <span class="font-bold">Last Name :</span> {{ advisor.LastName }}
-            </p>
-            <p>
-                <span class="font-bold">Office :</span> {{ advisor.Office }}
-            </p>
-            <p>
-                <span class="font-bold mb-10">Email :</span> {{ advisor.Email }}
-            </p>
-        </div>
+    <div class="flex justify-start -ml-5">
+      <AdvisorCard :advisor="advisor"></AdvisorCard>
     </div>
 </template>
+
+<!-- <style scoped>
+.advisor-card-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: -20px;
+}
+</style> -->

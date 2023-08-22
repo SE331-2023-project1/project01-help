@@ -33,7 +33,7 @@ const router = createRouter({
           props: true
         },
         {
-          path: 'advisor',
+          path: 'advisor/:advisorId',
           name: 'student-advisor',
           component: StudentAdvisorView,
           props: true
