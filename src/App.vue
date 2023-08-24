@@ -4,15 +4,19 @@ import { RouterLink, RouterView } from "vue-router"
 </script>
 
 <template>
+  <div class="flex flex-col items-center justify-start  ">
   <header>
     <img alt="Vue logo" class="logo" src="@/assets/management.png" width="125" height="125" />
-    <div class="margin-left: 5px;">
-      <nav class="margin-left: 5px;" >
-        <RouterLink to="/">Student</RouterLink>
-        <RouterLink to="/advisor">Advisor</RouterLink>
+    <div >
+      <nav>
+        <RouterLink to="/" class="iinline-block  text-xl font-semibold hover:text-cyan-500 transition m-1 ">Student</RouterLink>
+        <span class="text-gray-350 m-2">|</span>
+        <RouterLink to="/advisor" class="inline-block text-xl font-semibold hover:text-cyan-500 transition m-1 ">Advisor</RouterLink>
       </nav>
     </div>
+  
   </header>
+</div>
 
   <RouterView />
 </template>

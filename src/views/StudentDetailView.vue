@@ -39,7 +39,7 @@ const addComment = () => {
 <template>
 
     <div>
-        <div v-if="student">
+        <div v-if="student ">
             <p>
                 <span class="font-bold">First Name :</span> {{ student.FirstName }}
             </p>
