@@ -43,7 +43,7 @@ AdvisorService.getAdvisorById(Number(props.id)).then((response) => {
     <div class="text-center">
       <div v-if="student">
         <h1 class="text-2xl font-mono font-semibold mt-5 mb-5">{{ `${student.FirstName} ${student.LastName}` }}</h1>
-        <img class="mb-5 max-w-full mx-auto" :src="student.stu_pic" alt="img">
+        <img class="mb-5 mx-auto w-20 h-20" :src="student.stu_pic" alt="img">
         <hr class="mb-5">
         <div id="nav">
             <RouterLink class="w-1/2 mr-3 text-blue-100 font-mono font-semibold py-2 rounded text-center " 
