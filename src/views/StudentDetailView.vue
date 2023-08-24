@@ -5,11 +5,11 @@ import { ref, type PropType, computed } from 'vue';
 import StudentService from '@/services/StudentService';
 import { useMessageStore } from '@/stores/message';
 
-const props=defineProps({
-    student: {
-        type: Object as PropType<StudentDetail>,
-        require: true
-    }
+const props = defineProps({
+  student: {
+    type: Object as PropType<StudentDetail>,
+    require: true
+  }
 })
 
 const store = useMessageStore();
@@ -28,49 +28,54 @@ function addDetail() {
 }
 
 flashMessage.value.text = 'The Student Details Are Here....';
-  flashMessage.value.isVisible = true;
+flashMessage.value.isVisible = true;
 
-  setTimeout(() => {
-    flashMessage.value.isVisible = false;
-  }, 2000);
+setTimeout(() => {
+  flashMessage.value.isVisible = false;
+}, 2000);
 
 
 </script>
 
 <template>
-
-    <div>
-        <div v-if="student ">
-            <p>
-                <span class="font-bold">First Name :</span> {{ student.FirstName }}
-            </p>
-            <p>
-                <span class="font-bold">Last Name :</span> {{ student.LastName }}
-            </p>
-            <p>
-                <span class="font-bold">Student ID :</span> {{ student.Student_ID }}
-            </p>
-            <p>
-                <span class="font-bold mb-10">Registered on :</span> {{ student.registered }}
-            </p>
-        </div>
+  <div class="text-center">
+    <div v-if="student">
+      <p>
+        <span class="font-bold">First Name :</span> {{ student.FirstName }}
+      </p>
+      <p>
+        <span class="font-bold">Last Name :</span> {{ student.LastName }}
+      </p>
+      <p>
+        <span class="font-bold">Student ID :</span> {{ student.Student_ID }}
+      </p>
+      <p>
+        <span class="font-bold mb-10">Registered on :</span> {{ student.registered }}
+      </p>
     </div>
- <!-- Add Comment Box ... -->
-    <div v-if="detail && detail.length">
+  </div>
+
+  <!-- Add Comment Box ... -->
+  <div v-if="detail && detail.length">
     <h1 class=" text-center font-mono font-semibold">Student Detail</h1>
     <p v-for="(details, index) in detail" :key="index">" {{ details }} "</p>
   </div>
-  <div class="addDetail">
-    <input type="text" v-model="newDetail" placeholder="Add Student Detail.." />
-    <button @click="addDetail">Add Comment</button>
-  </div>
- 
-  <!-- Flash Message -->
-  <div v-if="flashMessage.isVisible" class="mt-4">
-      <div class="bg-orange-200 text-orange-800 p-2 rounded">
-        {{ flashMessage.text }}
-      </div>
-    </div>
+  <div class="mt-4 ">
+    <div class="addDetail">
+      <input class="border-2 border-inherit" type="text" v-model="newDetail" placeholder="Type your comment .." />
 
+      <button @click="addDetail" class="mt-2 w-36 text-center ml-px px-3 py-0.5 bg-gray-800  font-bold text-white rounded-md  hover:bg-gray-500 transition-colors duration-200 ease-in-out">Add Comment</button>
+
+    </div>
+  </div>
+  <div>
     
+  </div>
+  <!-- Flash Message -->
+
+  <div v-if="flashMessage.isVisible" class="mt-4">
+    <div class="bg-orange-200 text-orange-800 p-2 rounded">
+      {{ flashMessage.text }}
+    </div>
+  </div>
 </template>
