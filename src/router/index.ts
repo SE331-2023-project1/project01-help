@@ -1,10 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import StudentView from '../views/StudentView.vue'
-import TeacherView from '../views/TeacherView.vue'
+import AdvisorView from '../views/AdvisorView.vue'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
-import StudentService from '@/services/StudentService'
-import type { StudentDetail, TeacherDetail } from '@/type'
+import StudentLayoutView from '../views/StudentLayoutView.vue'
+import StudentDetailView from '../views/StudentDetailView.vue'
+import StudentAdvisorView from '../views/StudentAdvisorView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -15,12 +16,32 @@ const router = createRouter({
       component: StudentView
     },
     {
-      path: '/teacher',
-      name: 'teacher',
-      component: TeacherView
+      path: '/advisor',
+      name: 'advisor',
+      component: AdvisorView
+    },
+    {
+      path: '/student/:id',
+      name: 'student-layout',
+      component: StudentLayoutView,
+      props: true,
+      children: [
+        {
+          path: '',
+          name: 'student-detail',
+          component: StudentDetailView,
+          props: true
+        },
+        {
+          path: 'advisor/:advisorId',
+          name: 'student-advisor',
+          component: StudentAdvisorView,
+          props: true
+        }
+      ]
     }
   ]
-})
+});
 
 // Start the progress bar on navigation
 router.beforeEach(() => {
@@ -62,6 +83,7 @@ router.afterEach(() => {
 //   const TeacherData: TeacherDetail[] = await fetchTeacher();
 //   StudentService.getStudent(TeacherData);
 // })
+
 
 
 

@@ -9,7 +9,7 @@ export interface StudentDetail {
         
 }
 
-export interface TeacherDetail {
+export interface AdvisorDetail {
     id: number
     FirstName: string
     LastName: string
@@ -19,8 +19,3 @@ export interface TeacherDetail {
     advisor_pic: string
 
 }
-
-
-
-
-

@@ -1,19 +1,15 @@
 
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router"
-
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
+    <img alt="Vue logo" class="logo" src="@/assets/management.png" width="125" height="125" />
     <div class="wrapper">
-      
-      <nav>
+      <nav class="font-mono text-yellow-300" >
         <RouterLink to="/">Student</RouterLink>
-        <RouterLink to="/teacher">Advisor</RouterLink>
-        
+        <RouterLink to="/advisor">Advisor</RouterLink>
       </nav>
     </div>
   </header>

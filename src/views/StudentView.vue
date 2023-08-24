@@ -40,9 +40,13 @@ const displayedStudents = computed(() => {
   <div class="student">
     <StudentCard v-for="student in displayedStudents" :key="student.id" :student="student"></StudentCard>
     <div class="pagination">
-      <button @click="prevPage" :disabled="currentPage === 1">PrevPage</button>
-      <button @click="nextPage" :disabled="currentPage === Math.ceil(students.length / itemsPerPage)">NextPage</button>
+      <button v-if="currentPage > 1" @click="prevPage" 
+        class="ml-px mb-5 px-3 py-2 bg-green-700 font-bold text-white rounded-md hover:bg-red-500 transition-colors duration-200 ease-in-out">
+        ◀ Back</button>
+      <button v-if="currentPage < Math.ceil(students.length / itemsPerPage)" @click="nextPage"
+        :class="['mb-5 px-3 py-2 bg-green-700 font-bold text-white rounded-md hover:bg-red-500 transition-colors duration-200 ease-in-out', currentPage > 1 ? 'ml-5' : '']">
+        Next ▶
+      </button>
     </div>
   </div>
 </template>
-
