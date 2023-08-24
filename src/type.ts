@@ -13,9 +13,9 @@ export interface AdvisorDetail {
     id: number
     FirstName: string
     LastName: string
-    Department: string
-    Email: string
-    Office: string
+    Department?: string
+    Email?: string
+    Office?: string
     advisor_pic: string
 
 }

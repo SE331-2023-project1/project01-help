@@ -21,10 +21,11 @@ import { RouterLink, RouterView } from "vue-router"
   </li>
 
   <li class="ml-auto mt-3 " >
-    <div class="">
-      <button class="w-4 h-4"><img src="./assets/add.png" alt="addButton">
-      <RouterLink to="/addPerson"></RouterLink>
-      </button>
+    <div class="w-4 h-4">
+      
+      <!-- <button class="w-4 h-4"><img src="./assets/add.png" alt="addButton"> -->
+      <RouterLink to="/addPerson"><img src="./assets/add.png" alt="addButton"></RouterLink>
+      <!-- </button> -->
         
     </div>
   </li>
