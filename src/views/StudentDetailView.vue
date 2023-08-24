@@ -1,38 +1,28 @@
 <script setup lang="ts">
 import type { Ref } from 'vue'
 import type { StudentDetail } from '@/type';
-import { ref, type PropType } from 'vue';
+import { ref, type PropType, computed } from 'vue';
 import StudentService from '@/services/StudentService';
+import { useMessageStore } from '@/stores/message';
 
-defineProps({
+const props=defineProps({
     student: {
         type: Object as PropType<StudentDetail>,
         require: true
     }
 })
 
+const store = useMessageStore();
+const message = computed(() => store.getMessage(String(props.student?.id)));
+const detail = computed(() => store.getDetail(String(props.student?.id)));
+const newDetail = ref("");
+function addDetail() {
+  store.addDetail(String(props.student?.id), newDetail.value);
+  //clear input box
+  newDetail.value = "";
+}
 
-const newComment = ref('');
-const flashMessage = ref({
-  text: '',
-  isVisible: false,
-});
 
-
-const comments = ref<string[]>([]);
-const addComment = () => {
-  if (newComment.value.trim() !== '') {
-    comments.value.push(newComment.value);
-    newComment.value = ''; 
-  
-    flashMessage.value.text = 'Comment added successfully';
-    flashMessage.value.isVisible = true;
-    
-    setTimeout(() => {
-      flashMessage.value.isVisible = false;
-    }, 2000);
-  }
-};
 
 </script>
 
@@ -54,26 +44,16 @@ const addComment = () => {
             </p>
         </div>
     </div>
-
-    <!-- Add Comment Box -->
-    <div class="mt-5 ">
-      <textarea class="text-black border-2 border-slate-800" v-model="newComment" rows="5" placeholder="Type your comment"></textarea>
-      <div class="mt-2 "><button class="ml-px px-3 py-0.5 bg-cyan-950 font-bold text-white rounded-md  "  @click="addComment">Add Comment</button></div>
-    </div>
-
-    <!-- Show Comments -->
-    <div v-if="comments.length > 0" class="comment-list">
-      <div v-for="comment in comments" :key="comment" class="comment">
-        {{ comment }}
-      </div>
-    </div>
-
-     <!-- Flash Message -->
-     <div class="text-orange-300">
-     <div v-if="flashMessage.isVisible" class="flash-message">
-      {{ flashMessage.text }}
-    </div></div>
-  
+ <!-- Add Comment Box ... -->
+    <div v-if="detail && detail.length">
+    <h1 class=" text-center font-mono font-semibold">Student Detail</h1>
+    <p v-for="(details, index) in detail" :key="index">" {{ details }} "</p>
+  </div>
+  <div class="addDetail">
+    <input type="text" v-model="newDetail" placeholder="Add Student Detail.." />
+    <button @click="addDetail">Add Detail</button>
+  </div>
  
+\
     
 </template>
