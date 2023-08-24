@@ -9,7 +9,7 @@
         <select
           v-model="selectedPersonType"
           id="personType"
-          class="ml-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block p-2.5"
+          class="ml-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block p-2.5"
         >
           <option value="student">Student</option>
           <option value="teacher">Advisor</option>
@@ -23,7 +23,7 @@
             <div class="flex mb-3">
               <label for="studentName" class="my-auto mr-2">Name:</label>
               <input
-                class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block p-2.5"
+                class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block p-2.5"
                 v-model="studentName"
                 type="text"
                 id="studentName"
@@ -36,7 +36,7 @@
             <div class="flex mb-3">
               <label for="studentSurname" class="my-auto mx-2">Surname:</label>
               <input
-                class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block p-2.5"
+                class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block p-2.5"
                 v-model="studentSurname"
                 type="text"
                 id="studentSurname"
@@ -50,7 +50,7 @@
           <div class="mb-3">
             <label for="studentProfileImage" class="mr-2">Profile Image URL:</label>
             <input
-              class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block p-2.5"
+              class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block p-2.5"
               v-model="studentProfileImage"
               type="text"
               id="studentProfileImage"
@@ -114,15 +114,7 @@
             </select>
           </div>
 
-          <div
-            id="flashMessage"
-            class="mb-2 animate-pulse text-center text-base font-fig bg-sky-500 font-fig text-white"
-            v-if="message">
-
-            <h4>{{ message }}</h4>
-
-          </div>
-          <FlashMessage />
+        
           <div class="flex justify-center mb-2">
             <button
               class="bg-sky-500 hover:bg-sky-700 shadow-md px-2 py-1 rounded-lg font-bold text-white"
@@ -178,14 +170,6 @@
             />
           </div>
 
-          <div
-            id="flashMessage"
-            class="mb-2 animate-pulse text-center text-base font-fig bg-sky-500 font-fig text-white"
-            v-if="message"
-          >
-            <h4>{{ message }}</h4>
-          </div>
-          <FlashMessage />
           <div class="flex justify-center mb-2">
             <button
               class="bg-sky-500 hover:bg-sky-700 shadow-md px-2 py-1 rounded-lg font-bold text-white"
