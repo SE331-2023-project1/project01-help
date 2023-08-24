@@ -18,7 +18,7 @@ AdvisorService.getAdvisorById(Number(advisorId))
 </script>
 
 <template>
-    <div class="flex justify-start -ml-5">
+    <div class="flex justify-center -ml-5 ">
         <AdvisorCard v-if="advisor" :advisor="advisor"></AdvisorCard>
     </div>
 </template>

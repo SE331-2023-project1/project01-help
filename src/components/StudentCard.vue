@@ -15,7 +15,7 @@
                   flex flex-col justify-center items-center" >
           <span class="font-bold text-xl"> {{ `${student.FirstName.toUpperCase()} ${student.LastName.toUpperCase()}` }}</span>
           <hr class="font-bold w-20 mt-4 border-blue-950">
-          <img class="mt-5 w-48 h-48" :src = "student.stu_pic" alt="img">
+          <img class="mt-5 w-20 h-20" :src = "student.stu_pic" alt="img">
       </div>
     </div>
   </RouterLink>

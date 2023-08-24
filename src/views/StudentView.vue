@@ -6,7 +6,7 @@ import { ref , computed } from 'vue'
 import type { Ref } from 'vue'
 
 const students: Ref<Array<StudentDetail>> = ref([])
-const itemsPerPage = 5; 
+const itemsPerPage = 6; 
 const currentPage = ref(1);
 
 StudentService.getStudent()
@@ -38,10 +38,11 @@ const displayedStudents = computed(() => {
 
 <template>
   <div class="student">
-    <StudentCard v-for="student in displayedStudents" :key="student.id" :student="student"></StudentCard>
+    <div class="grid gap-10 grid-cols-3 grid-row-3">
+    <StudentCard  v-for="student in displayedStudents" :key="student.id" :student="student"></StudentCard></div>
     <div class="pagination">
-      <button v-if="currentPage > 1" @click="prevPage" 
-        class="ml-px mb-5 px-3 py-2 bg-green-700 font-bold text-white rounded-md hover:bg-red-500 transition-colors duration-200 ease-in-out">
+      <button  v-if="currentPage > 1" @click="prevPage" 
+        class=" ml-px mb-5 px-3 py-2 bg-green-700 font-bold text-white rounded-md hover:bg-red-500 transition-colors duration-200 ease-in-out ">
         ◀ Back</button>
       <button v-if="currentPage < Math.ceil(students.length / itemsPerPage)" @click="nextPage"
         :class="['mb-5 px-3 py-2 bg-green-700 font-bold text-white rounded-md hover:bg-red-500 transition-colors duration-200 ease-in-out', currentPage > 1 ? 'ml-5' : '']">

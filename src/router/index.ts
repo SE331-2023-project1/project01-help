@@ -82,4 +82,40 @@ router.afterEach(() => {
   NProgress.done()
 })
 
+
+// const fetchStudents = async () => {
+//   try {
+//     const response = await StudentService.getStudent();
+//     return response.data;
+//   } catch (error) {
+//     console.error('Error fetching students:', error);
+//     return [];
+//   }
+// };
+
+// router.beforeEach(async () => {
+//   const studentData: StudentDetail[] = await fetchStudents();
+//   StudentService.getStudent(studentData);
+// })
+
+// const fetchTeacher = async () => {
+//   try {
+//     const response = await TeacherService.getTeacher();
+//     return response.data;
+//   } catch (error) {
+//     console.error('Error fetching Teacher:', error);
+//     return [];
+//   }
+// };
+
+// router.beforeEach(async () => {
+//   const TeacherData: TeacherDetail[] = await fetchTeacher();
+//   StudentService.getStudent(TeacherData);
+// })
+
+
+
+
+
+
 export default router
