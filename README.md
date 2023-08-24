@@ -1,6 +1,12 @@
 # vite-project-help
 
-This template should help get you started developing with Vue 3 in Vite.
+Members
+
+1. Putthipong Ninwong 642115032
+2. Sasipha Thonkhan 642115042 
+3. Siriyakorn Chomchuen 642115047
+
+
 
 ## Recommended IDE Setup
 
