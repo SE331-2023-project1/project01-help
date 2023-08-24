@@ -11,18 +11,33 @@ defineProps({
     }
 })
 
+
 const newComment = ref('');
+const flashMessage = ref({
+  text: '',
+  isVisible: false,
+});
+
+
 const comments = ref<string[]>([]);
 const addComment = () => {
   if (newComment.value.trim() !== '') {
     comments.value.push(newComment.value);
-    newComment.value = ''; // Clear the comment box
+    newComment.value = ''; 
+  
+    flashMessage.value.text = 'Comment added successfully';
+    flashMessage.value.isVisible = true;
+    
+    setTimeout(() => {
+      flashMessage.value.isVisible = false;
+    }, 2000);
   }
 };
 
 </script>
 
 <template>
+
     <div>
         <div v-if="student">
             <p>
@@ -52,6 +67,12 @@ const addComment = () => {
         {{ comment }}
       </div>
     </div>
+
+     <!-- Flash Message -->
+     <div v-if="flashMessage.isVisible" class="flash-message">
+      {{ flashMessage.text }}
+    </div>
+  
  
     
 </template>
