@@ -17,7 +17,6 @@ export const useStudentStore = defineStore('student', {
     },
     getStudentById: (state) => async (id: number) => {
       const response = state.students.find((student) => student.id === id)
-      // console.log(response.data)
       return new Promise<StudentDetail | null>((resolve) => {
         resolve(response || null)
       })
@@ -62,19 +61,19 @@ export const useStudentStore = defineStore('student', {
     async addStudent(student: StudentDetail) {
       try {
         console.log(student)
-        // ส่ง POST request ไปยัง URL ของ API สำหรับการเพิ่มนักเรียน
+        
         const response = await axios.post(import.meta.env.VITE_BACKEND_URL + '/student', student)
 
         if (response.status === 201) {
-          // การเพิ่มนักเรียนสำเร็จ
-          this.students.push(student) // เพิ่ม student ใน array
+          this.students.push(student) 
+
         } else {
-          // การเพิ่มนักเรียนไม่สำเร็จ
-          console.error('การเพิ่มนักเรียนไม่สำเร็จ')
+          
+          console.error('Can not add student')
         }
       } catch (error) {
         console.error(error)
-        console.error('เกิดข้อผิดพลาดในการส่งคำขอหรือตอบกลับจาก API:', error)
+        console.error('Have error with request or API:', error)
       }
     }
   }
