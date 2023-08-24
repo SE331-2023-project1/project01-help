@@ -6,15 +6,70 @@ import { RouterLink, RouterView } from "vue-router"
 <template>
   <div class="flex flex-col items-center justify-start  ">
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/management.png" width="125" height="125" />
-    <div >
-      <nav>
-        <RouterLink to="/" class="iinline-block  text-xl font-semibold hover:text-cyan-500 transition m-1 ">Student</RouterLink>
-        <span class="text-gray-350 m-2">|</span>
-        <RouterLink to="/advisor" class="inline-block text-xl font-semibold hover:text-cyan-500 transition m-1 ">Advisor</RouterLink>
-      </nav>
+
+    <nav>
+      <ul class="flex border-b">
+  <li class="-mb-px mr-1">
+    <div class="bg-white inline-block border-l border-t border-r rounded-t py-2 px-4 text-blue-700 font-semibold" >
+      <RouterLink to="/">Student</RouterLink>
     </div>
+  </li>
+
+  <li class="mr-1">
+    <div class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold">
+      <RouterLink to="/advisor">Advisor</RouterLink>
+    </div>
+  </li>
+
+  <li class="ml-auto mt-3 " >
+    <div class="w-4 h-4">
+      
+      <!-- <button class="w-4 h-4"><img src="./assets/add.png" alt="addButton"> -->
+      <RouterLink to="/addPerson"><img src="./assets/add.png" alt="addButton"></RouterLink>
+      <!-- </button> -->
+        
+    </div>
+  </li>
   
+</ul>
+    </nav>
+
+
+
+    <!-- <div> เป็นไรไม่รู้ เข้า studentDetail แล้วขึ้น 2อัน
+    <nav>
+      <ul class="flex border-b">
+        <li class="-mb-px mr-1">
+          <div class="bg-white inline-block border-l border-t border-r rounded-t py-2 px-4 text-blue-700 font-semibold">
+            <router-link to="/">Student</router-link>
+          </div>
+        </li>
+
+        <li class="mr-1">
+          <div class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold">
+            <router-link to="/advisor">Advisor</router-link>
+          </div>
+        </li>
+
+      </ul>
+    </nav>
+
+    <transition name="fade" mode="out-in">
+      <router-view></router-view>
+    </transition>
+  </div> -->
+
+
+
+
+
+    <!-- <img alt="Vue logo" class="logo" src="@/assets/management.png" width="125" height="125" />
+    <div class="wrapper">
+      <nav class="font-mono text-yellow-300" >
+        <RouterLink to="/">Student</RouterLink>
+        <RouterLink to="/advisor">Advisor</RouterLink>
+      </nav>
+    </div> -->
   </header>
 </div>
 
