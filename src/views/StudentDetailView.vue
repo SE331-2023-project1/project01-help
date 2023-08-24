@@ -56,9 +56,9 @@ const addComment = () => {
     </div>
 
     <!-- Add Comment Box -->
-    <div class="comment-box">
-      <textarea v-model="newComment" rows="5" placeholder="Type your comment"></textarea>
-      <button @click="addComment">Add Comment</button>
+    <div class="mt-5 ">
+      <textarea class="text-black border-2 border-slate-800" v-model="newComment" rows="5" placeholder="Type your comment"></textarea>
+      <div class="mt-2 "><button class="ml-px px-3 py-0.5 bg-cyan-950 font-bold text-white rounded-md  "  @click="addComment">Add Comment</button></div>
     </div>
 
     <!-- Show Comments -->
@@ -69,9 +69,10 @@ const addComment = () => {
     </div>
 
      <!-- Flash Message -->
+     <div class="text-orange-300">
      <div v-if="flashMessage.isVisible" class="flash-message">
       {{ flashMessage.text }}
-    </div>
+    </div></div>
   
  
     

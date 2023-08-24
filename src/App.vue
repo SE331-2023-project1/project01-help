@@ -6,8 +6,8 @@ import { RouterLink, RouterView } from "vue-router"
 <template>
   <header>
     <img alt="Vue logo" class="logo" src="@/assets/management.png" width="125" height="125" />
-    <div class="wrapper">
-      <nav class="font-mono text-yellow-300" >
+    <div class="margin-left: 5px;">
+      <nav class="margin-left: 5px;" >
         <RouterLink to="/">Student</RouterLink>
         <RouterLink to="/advisor">Advisor</RouterLink>
       </nav>
@@ -17,7 +17,7 @@ import { RouterLink, RouterView } from "vue-router"
   <RouterView />
 </template>
 
-<style scoped>
+<!-- <style scoped>
   header {
   line-height: 1.5;
   max-height: 100vh;
@@ -79,4 +79,4 @@ nav a:first-of-type {
     margin-top: 1rem;
   }
 }
-</style>
+</style> -->

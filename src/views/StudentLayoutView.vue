@@ -54,6 +54,6 @@ AdvisorService.getAdvisorById(Number(props.id)).then((response) => {
         </div>
     </div>
     <RouterView class="mt-3 mb-6" :student="student"></RouterView>
-    <RouterLink class="ml-px px-3 py-2 bg-green-700 font-bold text-white rounded-md hover:bg-red-500 transition-colors duration-200 ease-in-out" to="/">◀ Back to Students</RouterLink>
+    <div class="mt-10"><RouterLink class=" ml-px px-3 py-2 bg-green-700  font-bold text-white rounded-md  hover:bg-red-500 transition-colors duration-200 ease-in-out" to="/">◀ Back to Students</RouterLink></div>
   </div>
 </template>
