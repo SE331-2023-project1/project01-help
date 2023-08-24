@@ -16,12 +16,23 @@ const store = useMessageStore();
 const message = computed(() => store.getMessage(String(props.student?.id)));
 const detail = computed(() => store.getDetail(String(props.student?.id)));
 const newDetail = ref("");
+const flashMessage = ref({
+  text: '',
+  isVisible: false,
+});
+
 function addDetail() {
   store.addDetail(String(props.student?.id), newDetail.value);
   //clear input box
   newDetail.value = "";
 }
 
+flashMessage.value.text = 'The Student Details Are Here....';
+  flashMessage.value.isVisible = true;
+
+  setTimeout(() => {
+    flashMessage.value.isVisible = false;
+  }, 2000);
 
 
 </script>
@@ -51,9 +62,15 @@ function addDetail() {
   </div>
   <div class="addDetail">
     <input type="text" v-model="newDetail" placeholder="Add Student Detail.." />
-    <button @click="addDetail">Add Detail</button>
+    <button @click="addDetail">Add Comment</button>
   </div>
  
-\
+  <!-- Flash Message -->
+  <div v-if="flashMessage.isVisible" class="mt-4">
+      <div class="bg-orange-200 text-orange-800 p-2 rounded">
+        {{ flashMessage.text }}
+      </div>
+    </div>
+
     
 </template>
