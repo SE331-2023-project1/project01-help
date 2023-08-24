@@ -10,6 +10,16 @@ defineProps({
         require: true
     }
 })
+
+const newComment = ref('');
+const comments = ref<string[]>([]);
+const addComment = () => {
+  if (newComment.value.trim() !== '') {
+    comments.value.push(newComment.value);
+    newComment.value = ''; // Clear the comment box
+  }
+};
+
 </script>
 
 <template>
@@ -29,4 +39,19 @@ defineProps({
             </p>
         </div>
     </div>
+
+    <!-- Add Comment Box -->
+    <div class="comment-box">
+      <textarea v-model="newComment" rows="5" placeholder="Type your comment"></textarea>
+      <button @click="addComment">Add Comment</button>
+    </div>
+
+    <!-- Show Comments -->
+    <div v-if="comments.length > 0" class="comment-list">
+      <div v-for="comment in comments" :key="comment" class="comment">
+        {{ comment }}
+      </div>
+    </div>
+ 
+    
 </template>
