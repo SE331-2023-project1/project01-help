@@ -16,9 +16,8 @@
         </select>
       </div>
 
-      <!-- แสดงแบบฟอร์มขึ้นอย่างใดอย่างหนึ่งขึ้นอยู่กับ selectedPersonType -->
       <div v-if="selectedPersonType === 'student'">
-        <!-- แบบฟอร์มสำหรับเพิ่มนักเรียน -->
+        <!-- Form to add student -->
         <form @submit.prevent="addStudent">
           <div class="grid grid-cols-2 gap-4">
             <div class="flex mb-3">
@@ -63,7 +62,7 @@
           </div>
 
           <div class="flex mb-3">
-            <!-- สร้าง input fields สำหรับรายการคอร์ส -->
+            <!-- course list -->
             <label for="studentCourseList" class="my-auto mr-2">Course List:</label>
             <select
               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block p-2.5"
@@ -72,7 +71,7 @@
               required
             >
               <option value disabled>Select Course</option>
-              <!-- วนลูปเพื่อแสดงรายชื่อครูที่มีใน store ของครู -->
+              
               <option value="Psychology">Psychology</option>
               <option value="Computer Science">Computer Science</option>
               <option value="Economics">Economics</option>
@@ -90,9 +89,6 @@
               <option value="English">English</option>
               <option value="Spanish">Spanish</option>
             </select>
-            <!-- <input
-                class="w-full bg-gray-50 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block p-2.5"
-                v-model="studentCourseList" type="text" id="studentCourseList" required> -->
           </div>
 
           <div class="flex mb-3">
