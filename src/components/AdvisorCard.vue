@@ -14,7 +14,7 @@
     <p>Department: {{ advisor.Department}}</p>
     <p>Email: {{ advisor.Email }}</p>
     <p>Office: {{ advisor.Office}}</p>
-    <img class="mt-5" :src = "advisor.advisor_pic" alt="img">
+    <img class="mt-5 mx-auto object-cover h-48 w-48" :src = "advisor.advisor_pic" alt="img">
     </div>
 </template>
 

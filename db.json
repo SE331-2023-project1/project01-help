@@ -171,8 +171,6 @@
       "advisor": 109,
       "stu_pic": "https://randomuser.me/api/portraits/women/19.jpg"
     }
-
-
   ],
   "advisor": [
     {
@@ -264,6 +262,12 @@
       "Email": "sarah.adams@university.edu",
       "Office": "Building J, Room 310",
       "advisor_pic": "https://randomuser.me/api/portraits/women/40.jpg"
+    },
+    {
+      "id": 610,
+      "FirstName": "berry",
+      "LastName": "gun",
+      "advisor_pic": "https://www.klassroom.com/cdn/shop/articles/howdoIbecomeateacherlaterinlife_691984306.jpg?v=1649211447"
     }
   ]
 }

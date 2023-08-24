@@ -6,7 +6,7 @@ import { RouterLink, RouterView } from "vue-router"
 <template>
   <header>
 
-    <nav>
+    <nav class="mt-6">
       <ul class="flex border-b">
   <li class="-mb-px mr-1">
     <div class="bg-white inline-block border-l border-t border-r rounded-t py-2 px-4 text-blue-700 font-semibold" >
@@ -21,8 +21,8 @@ import { RouterLink, RouterView } from "vue-router"
   </li>
 
   <li class="ml-auto mt-3 " >
-    <div class="w-4 h-4">
-      <RouterLink to="/addPerson"><img src="./assets/add.png" alt="addButton"></RouterLink>
+    <div class="w-8 h-8">
+      <RouterLink to="/addPerson"><img src="./assets/add-friend.png" alt="addButton"></RouterLink>
     </div>
   </li>
   
