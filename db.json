@@ -170,6 +170,15 @@
       "registered": "History, Economics, Psychology, Biology, Music",
       "advisor": 109,
       "stu_pic": "https://randomuser.me/api/portraits/women/19.jpg"
+    },
+    {
+      "id": 668197,
+      "Student_ID": "534523",
+      "FirstName": "test",
+      "LastName": "tear",
+      "stu_pic": "https://www.parentmap.com/images/article/7877/BOY_feature_credit_will_austin_848x1200.jpg",
+      "registered": "History",
+      "advisor": 108
     }
   ],
   "advisor": [
@@ -267,6 +276,12 @@
       "id": 610,
       "FirstName": "berry",
       "LastName": "gun",
+      "advisor_pic": "https://www.klassroom.com/cdn/shop/articles/howdoIbecomeateacherlaterinlife_691984306.jpg?v=1649211447"
+    },
+    {
+      "id": 194,
+      "FirstName": "test",
+      "LastName": "you",
       "advisor_pic": "https://www.klassroom.com/cdn/shop/articles/howdoIbecomeateacherlaterinlife_691984306.jpg?v=1649211447"
     }
   ]
