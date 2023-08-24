@@ -1,4 +1,6 @@
 import { defineStore } from "pinia";
+
+
 export const useMessageStore = defineStore("message", {
   state: () => ({
     message: {} as Record<string, string>,
@@ -28,4 +30,8 @@ export const useMessageStore = defineStore("message", {
       this.flashMessage= ''
   }
   },
-});
+  
+}
+);
+
+

@@ -9,19 +9,19 @@ import { RouterLink, RouterView } from "vue-router"
 
     <nav class="mt-6">
       <ul class="flex border-b">
-  <li class="-mb-px mr-1">
-    <div class="bg-white inline-block border-l border-t border-r rounded-t py-2 px-4 text-blue-700 font-semibold" >
+  <li class=" m-2">
+    <div class="bg-white border-white rounded-lg py-2 px-4 text-blue-500 hover:text-blue-800 font-mono font-semibold" >
       <RouterLink to="/">Student</RouterLink>
     </div>
   </li>
 
-  <li class="mr-1">
-    <div class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold">
+  <li class="m-2">
+    <div class="bg-white border-white rounded-lg py-2 px-4 text-blue-500 hover:text-blue-800 font-mono font-semibold ">
       <RouterLink to="/advisor">Advisor</RouterLink>
     </div>
   </li>
 
-  <li class="ml-auto mt-3 " >
+  <li class="mt-3 " >
     <div class="w-8 h-8">
       <RouterLink to="/addPerson"><img src="./assets/add-friend.png" alt="addButton"></RouterLink>
     </div>

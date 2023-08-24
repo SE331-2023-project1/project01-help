@@ -1,20 +1,20 @@
 <template>
-    <div class="border-2 border-slate-600 w20-h20
-                rounded-lg
-                shadow-lg
-                m-5
-              bg-white px-10 py-8
-              text-slate-800 
-                text-base
-                font-mono
-              hover:bg-slate-300 
-                cursor-pointer" >
-      <span> First Name: {{ advisor.FirstName }}</span>
-    <p>Last Name: {{ advisor.LastName }}</p>
-    <p>Department: {{ advisor.Department}}</p>
-    <p>Email: {{ advisor.Email }}</p>
-    <p>Office: {{ advisor.Office}}</p>
-    <img class="mt-5 mx-auto object-cover h-48 w-48" :src = "advisor.advisor_pic" alt="img">
+    <div class=" AdviorDetail-class
+                  border-2 border-blue-950 w20-h20
+                  rounded-lg
+                  shadow-lg
+                  mt-5 mb-5 w-250px
+                  bg-white pd-10 py-8
+                  text-blue-950 
+                  text-base
+                  font-mono
+                  flex flex-col justify-center items-center" >
+      <span class="font-bold"> First Name: </span>{{ advisor.FirstName }}
+    <p class="font-bold">Last Name: </p>{{ advisor.LastName }}
+    <p class="font-bold">Department: </p>{{ advisor.Department}}
+    <p class="font-bold">Email: </p>{{ advisor.Email }}
+    <p class="font-bold">Office: </p>{{ advisor.Office}}
+    <img class="mt-5 w-20 h-20" :src = "advisor.advisor_pic" alt="img">
     </div>
 </template>
 
@@ -31,18 +31,3 @@ const props = defineProps({
 })
 </script>
 
-<style scoped>
-.advisorDetail-class {
-padding: 20px;
-width: 250px;
-cursor: pointer;
-border: 1 px solid #39495c;
-margin-top: 20px;
-margin-bottom: 18px;
-}
-
-.advisorDetail-class:hover {
-transform: scale(1.01);
-box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2);
-}
-</style>

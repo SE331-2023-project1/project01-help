@@ -3,7 +3,7 @@
     class="flex flex-col p-3 w-3/4 h-4/5 border border-gray-700 rounded-lg mb-4 bg-white shadow-md my-5 mx-auto"
   >
     <div class="font-fig mx-5 text-black">
-      <h1 class="flex justify-center font-bold text-2xl mb-3 text-green-600">Add Person</h1>
+      <h1 class="flex justify-center font-bold text-2xl mb-3 text-sky-600">Add Person</h1>
       <div class="flex mb-3">
         <label class="my-auto" for="personType">Select Person Type:</label>
         <select
@@ -65,7 +65,7 @@
             <!-- course list -->
             <label for="studentCourseList" class="my-auto mr-2">Course List:</label>
             <select
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block p-2.5"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block p-2.5"
               v-model="studentCourseList"
               id="studentCourseList"
               required
@@ -95,7 +95,7 @@
           <div class="flex mb-3">
             <label for="studentAdvisor" class="my-auto mr-2">Advisor:</label>
             <select
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block p-2.5"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block p-2.5"
               v-model="studentTeacher"
               id="studentAdvisor"
             >
@@ -116,7 +116,7 @@
 
           <div
             id="flashMessage"
-            class="mb-2 animate-pulse text-center text-base font-fig bg-green-500 font-fig text-white"
+            class="mb-2 animate-pulse text-center text-base font-fig bg-sky-500 font-fig text-white"
             v-if="message">
 
             <h4>{{ message }}</h4>
@@ -125,7 +125,7 @@
           <FlashMessage />
           <div class="flex justify-center mb-2">
             <button
-              class="bg-green-500 hover:bg-green-700 shadow-md px-2 py-1 rounded-lg font-bold text-white"
+              class="bg-sky-500 hover:bg-sky-700 shadow-md px-2 py-1 rounded-lg font-bold text-white"
               type="submit">
               Add Student
             </button>
@@ -140,7 +140,7 @@
             <div class="flex mb-3">
               <label for="teacherName" class="mr-2 my-auto">Name:</label>
               <input
-                class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block p-2.5"
+                class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block p-2.5"
                 v-model="teacherName"
                 type="text"
                 id="teacherName"
@@ -153,7 +153,7 @@
             <div class="flex mb-3">
               <label for="teacherSurname" class="mr-2 my-auto">Surname:</label>
               <input
-                class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block p-2.5"
+                class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block p-2.5"
                 v-model="teacherSurname"
                 type="text"
                 id="teacherSurname"
@@ -168,7 +168,7 @@
             <label for="teacherProfileImage" class="mr-2">Profile Image URL:</label>
             <input
               placeholder="('http://..' or 'https://..)"
-              class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block p-2.5"
+              class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block p-2.5"
               v-model="teacherProfileImage"
               type="text"
               id="teacherProfileImage"
@@ -180,7 +180,7 @@
 
           <div
             id="flashMessage"
-            class="mb-2 animate-pulse text-center text-base font-fig bg-green-500 font-fig text-white"
+            class="mb-2 animate-pulse text-center text-base font-fig bg-sky-500 font-fig text-white"
             v-if="message"
           >
             <h4>{{ message }}</h4>
@@ -188,7 +188,7 @@
           <FlashMessage />
           <div class="flex justify-center mb-2">
             <button
-              class="bg-green-500 hover:bg-green-700 shadow-md px-2 py-1 rounded-lg font-bold text-white"
+              class="bg-sky-500 hover:bg-sky-700 shadow-md px-2 py-1 rounded-lg font-bold text-white"
               type="submit"
             >
               Add Teacher
