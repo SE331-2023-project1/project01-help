@@ -56,7 +56,7 @@
               id="studentProfileImage"
               required
               pattern="https?://.+"
-              placeholder="Add link of your picture ('http://..' or 'https://..)"
+              placeholder="('http://..' or 'https://..)"
               title="Must start with 'http://' or 'https://'"
             />
           </div>
@@ -91,8 +91,8 @@
             </select>
           </div>
 
+
           <div class="flex mb-3">
-            <!-- เลือกครูจาก dropdown list (ให้นำมาจาก store ของครู) -->
             <label for="studentAdvisor" class="my-auto mr-2">Advisor:</label>
             <select
               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block p-2.5"
@@ -111,26 +111,22 @@
               <option value="109">Dr. Robert</option>
               <option value="110">Prof. Sarah</option>
 
-              <!-- วนลูปเพื่อแสดงรายชื่อครูที่มีใน store ของครู -->
-              <!-- <option v-for="teacher in teachers" :key="teacher.id" :value="teacher.id">{{ teacher.name }} {{
-                  teacher.surname
-                }}</option> -->
             </select>
           </div>
 
           <div
             id="flashMessage"
             class="mb-2 animate-pulse text-center text-base font-fig bg-green-500 font-fig text-white"
-            v-if="message"
-          >
+            v-if="message">
+
             <h4>{{ message }}</h4>
+
           </div>
           <FlashMessage />
           <div class="flex justify-center mb-2">
             <button
               class="bg-green-500 hover:bg-green-700 shadow-md px-2 py-1 rounded-lg font-bold text-white"
-              type="submit"
-            >
+              type="submit">
               Add Student
             </button>
           </div>
@@ -138,7 +134,7 @@
       </div>
 
       <div v-else-if="selectedPersonType === 'teacher'">
-        <!-- แบบฟอร์มสำหรับเพิ่มครู -->
+        <!-- Form to add advisor-->
         <form @submit.prevent="addTeacher">
           <div class="grid grid-cols-2 gap-4">
             <div class="flex mb-3">
@@ -171,7 +167,7 @@
           <div class="mb-3">
             <label for="teacherProfileImage" class="mr-2">Profile Image URL:</label>
             <input
-              placeholder="Add link of your picture ('http://..' or 'https://..)"
+              placeholder="('http://..' or 'https://..)"
               class="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block p-2.5"
               v-model="teacherProfileImage"
               type="text"
@@ -219,7 +215,7 @@ const studentSurname = ref('')
 const studentProfileImage = ref('')
 const studentCourseList = ref('')
 const studentTeacher = ref('')
-// const studentComment = ref('');
+
 
 const teacherName = ref('')
 const teacherSurname = ref('')
@@ -235,14 +231,14 @@ const addStudent = () => {
   const store = useStudentStore()
 
   const generateRandomID = () => {
-    const min = 100000 // Minimum 6-digit number
-    const max = 999999 // Maximum 6-digit number
+    const min = 100000 
+    const max = 999999 
     return Math.floor(Math.random() * (max - min + 1)) + min
   }
 
   const newStudent: StudentDetail = {
-    id: generateRandomID(), // สร้าง ID ใหม่ตามต้องการ
-    Student_ID: generateRandomID().toString(), // สร้าง ID ใหม่ตามต้องการ
+    id: generateRandomID(), 
+    Student_ID: generateRandomID().toString(), 
     FirstName: studentName.value,
     LastName: studentSurname.value,
     stu_pic: studentProfileImage.value,
@@ -251,10 +247,10 @@ const addStudent = () => {
       .map((course) => course.trim())
       .join(', '),
     advisor: parseInt(studentTeacher.value)
-    // comment: studentComment.value.split(',').map(comment => comment.trim()),
+    
   }
 
-  store.addStudent(newStudent) // หรือ store.addTeacher(newTeacher);
+  store.addStudent(newStudent) 
 
   console.log(newStudent)
 
@@ -263,15 +259,15 @@ const addStudent = () => {
     storeMessage.resetMessage()
   }, 4000)
 
-  // ล้างค่าฟอร์ม
+  
   clearStudentForm()
 }
 
 const fetchTeachers = () => {
-  // นำเข้า useTeacherStore เพื่อเรียกใช้ฟังก์ชัน fetchTeachers จาก store
+  
   const teacherStore = useTeacherStore()
   teacherStore.fetchTeachersFromDB()
-  // teacherStore.getTeachers
+  
   console.log(teacherStore.getTeachers)
 }
 
@@ -279,30 +275,30 @@ const addTeacher = () => {
   const storeTeacher = useTeacherStore()
 
   const generateRandomTID = () => {
-    const min = 100 // Minimum 3-digit number
-    const max = 999 // Maximum 3-digit number
+    const min = 100 
+    const max = 999 
     const randomThreeDigitNumber = Math.floor(Math.random() * (max - min + 1)) + min
     return randomThreeDigitNumber
   }
 
   const newTeacher: AdvisorDetail = {
-    id: generateRandomTID(), // สร้าง ID ใหม่ตามต้องการ
+    id: generateRandomTID(), 
     FirstName: teacherName.value,
     LastName: teacherSurname.value,
     advisor_pic: teacherProfileImage.value
   }
 
-  storeTeacher.addTeacher(newTeacher) // เพิ่มครูใหม่ลงในสถานะของครู
+  storeTeacher.addTeacher(newTeacher) 
   console.log(newTeacher)
 
-  // เรียกใช้ fetchTeachers() เพื่ออัปเดตรายการครูในหน้า TeacherListView.vue
+  
   fetchTeachers()
 
   storeMessage.updateMessage('You are successfully for adding teacher.')
   setTimeout(() => {
     storeMessage.resetMessage()
   }, 4000)
-  // ล้างค่าฟอร์ม
+  
   clearTeacherForm()
 }
 
@@ -312,7 +308,7 @@ const clearStudentForm = () => {
   studentProfileImage.value = ''
   studentCourseList.value = ''
   studentTeacher.value = ''
-  // studentComment.value = '';
+  
 }
 
 const clearTeacherForm = () => {

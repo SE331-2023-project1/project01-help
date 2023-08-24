@@ -29,12 +29,6 @@ export const useTeacherStore = defineStore('teacher', {
         },
         async fetchTeachersFromDB() {
             const response = await AdvisorService.getAdvisor()
-            // try {
-            //     return response.data
-            // } catch (error) {
-            //     console.log(error)
-            //     return null
-            // }
 
             this.setTeacher(response.data)
             
@@ -57,10 +51,10 @@ export const useTeacherStore = defineStore('teacher', {
                 return null
             }
         },
-        // ส่วนของ useTeacherStore
+        
         async addTeacher(advisor: AdvisorDetail) {
             try {
-              // สร้างข้อมูล requestData
+              
               const requestData = {
                 id: advisor.id,
                 name: advisor.FirstName,
@@ -68,22 +62,18 @@ export const useTeacherStore = defineStore('teacher', {
                 profileimage: advisor.advisor_pic,
               };
           
-              // ส่ง POST request ไปยัง URL ของ API สำหรับการเพิ่มครู
               const response = await axios.post(import.meta.env.VITE_BACKEND_URL + '/advisor', advisor);
-
-
           
               if (response.status === 201) {
-                // การเพิ่มครูสำเร็จ
                 this.teachers.push(advisor)
-                // console.log(this.getTeachers)
+                
               } else {
-                // การเพิ่มครูไม่สำเร็จ
-                console.error('การเพิ่มครูไม่สำเร็จ');
+                console.error('Can not add advisor');
               }
+
             } catch (error) {
                 console.error(error)
-                console.error('เกิดข้อผิดพลาดในการส่งคำขอหรือตอบกลับจาก API:', error);
+                console.error('Have error with request or API:', error);
             }
           },
   
